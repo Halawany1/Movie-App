@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
+    //mp app
     return const MaterialApp(
       debugShowCheckedModeBanner: true,
       title: 'Movie App',
