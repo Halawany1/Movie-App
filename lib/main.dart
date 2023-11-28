@@ -21,13 +21,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-<<<<<<< HEAD
       debugShowCheckedModeBanner: true,
       title: 'Movie App',
-=======
-      debugShowCheckedModeBanner: false,
-      title: 'Movie App sdfds',
->>>>>>> halawany
       home:  MainMoviesScreen()
     );
   }
