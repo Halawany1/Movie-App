@@ -17,11 +17,8 @@ void main() async{
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
-  //dsfsdf
   @override
   Widget build(BuildContext context) {
-    //fuck
     return const MaterialApp(
       debugShowCheckedModeBanner: true,
       title: 'Movie App',
