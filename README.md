@@ -1,4 +1,4 @@
-# wather_app
+# Movie_App
 
 A new Flutter project.
 
