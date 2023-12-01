@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
 
     return const MaterialApp(
       debugShowCheckedModeBanner: true,
-      title: 'movie app',
+      title: 'Movie App',
       home:  MainMoviesScreen()
     );
   }
