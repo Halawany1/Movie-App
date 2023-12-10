@@ -2,45 +2,36 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class RowDetailMovieComponent extends StatelessWidget {
-  final String moviesText;
-  const RowDetailMovieComponent({super.key,required this.moviesText});
+class BuildRowDetailsMovie extends StatelessWidget {
+  final dynamic text;
+  final bool vote;
+  final IconData icon;
+
+  const BuildRowDetailsMovie(
+      {super.key, required this.text,
+        required this.icon,
+        required this.vote});
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.fromLTRB(16.0, 24.0, 16.0, 8.0),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Text(
-            moviesText,
-            style: GoogleFonts.poppins(
-              fontSize: 19,
-              fontWeight: FontWeight.w500,
-              color: Colors.white,
-              letterSpacing: 0.15,
-            ),
+    return Row(
+      children: [
+        Icon(
+          icon,
+          color: vote ? Colors.white : Color(0xFFFF8700),
+        ),
+        const SizedBox(
+          width: 5,
+        ),
+        Text(
+          text.toString(),
+          style: GoogleFonts.poppins(
+            fontSize: 15,
+            fontWeight: FontWeight.w600,
+            color: vote ? Colors.white : Color(0xFFFF8700),
           ),
-          InkWell(
-            onTap: () {
-              /// TODO : NAVIGATION TO POPULAR SCREEN
-            },
-            child:const Padding(
-              padding:  EdgeInsets.all(8.0),
-              child: Row(
-                children:  [
-                  Text('See More',style: TextStyle( color: Colors.white,),),
-                  Icon(
-                    Icons.arrow_forward_ios,
-                    size: 16.0,
-                    color: Colors.white,
-                  )
-                ],
-              ),
-            ),
-          ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

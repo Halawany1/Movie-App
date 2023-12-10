@@ -5,12 +5,12 @@ import 'package:wather_app/movies/domain/respository/base_Movies_repository.dart
 
 import '../../../core/error/failure.dart';
 
-class GetNowPlayingMoviesUseCase extends BaseUseCase<List<Movie>>{
+class GetCastMoviesUseCase extends BaseUseCaseWithParameter<List<Movie>,int>{
   final BaseMoviesRepository baseMoviesRepository;
-  GetNowPlayingMoviesUseCase(this.baseMoviesRepository);
+  GetCastMoviesUseCase(this.baseMoviesRepository);
 
   @override
-  Future<Either<Failure, List<Movie>>> call() async{
-    return await baseMoviesRepository.getNowPlayingMovies();
+  Future<Either<Failure, List<Movie>>> call(int id) async{
+    return await baseMoviesRepository.getCastMovie(id);
   }
 }
