@@ -86,9 +86,6 @@ Welcome to the Movie App repository! This Flutter application is built with a cl
    flutter run
 
 ## Dependencies
-The project relies on the following key dependencies:
-
-## Dependencies
 
 The Movie App relies on the following key dependencies, each serving a specific purpose:
 
